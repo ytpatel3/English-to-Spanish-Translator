@@ -36,6 +36,23 @@ int main() {
     int userChoice;
     bool errorTrap = true;
 
+    while (errorTrap == true) {
+      try {
+        cout << "\n\nWhat would you like to do?\n";
+        cout << "\nOption 1:  Translate English to Spanish" << endl;
+        //cout << "2) Translate Spanish to English" << endl;
+        //Spanish to English is a bit glitchy. Will be implemented later.
+        string test;
+        getline(cin, test);
+        userChoice = stoi(test);
+        if (userChoice == 1) {
+          break;
+        } else {
+          cout << "\nInvalid entry. Please choose a valid option.\n";
+        }      } catch (invalid_argument) {
+        cout << "\nInvalid entry. Please choose a valid option.\n";
+      }
+    }
 
     ifstream myfile;
     myfile.open("English.txt");
@@ -49,7 +66,7 @@ int main() {
       bool isFound;
       int lineCounter = 0, pos = 0, lineCounter2 = 0;
 
-      cout << "\nEnglish word to be translated (lowercase): ";
+      cout << "\nWord to be translated (lowercase): ";
       getline(cin, search);
 
       transform(search.begin(), search.end(), search.begin(), ::tolower);
