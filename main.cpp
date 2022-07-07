@@ -1,6 +1,5 @@
 /*
-Yash Patel, Rahul Pemmasani, Krrishiv Kohli, Ashwin Vaithiyalingam
-Hackathon 2022
+Yash Patel
 4/23/22
 */
 
