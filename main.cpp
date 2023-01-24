@@ -21,8 +21,7 @@ using namespace std;
 int main() {
   
   bool runAgain = true;
-  cout << "\n                Yash's Secure Translator                      \n";
-  cout << "      ＊This translator never compromises user data*\n\n";
+  cout << "\n                Yash's Spanish Translator                      \n";
 
   do {
     string userChoice2;
@@ -32,7 +31,7 @@ int main() {
     while (errorTrap == true) {
       try {
         cout << "\n\nWhat would you like to do?\n";
-        cout << "\nOption 1:  Translate English to Spanish" << endl;
+        cout << "\n1.)  Translate English to Spanish" << endl;
         //cout << "2) Translate Spanish to English" << endl;
         //Spanish to English is a bit glitchy. Will be implemented later.
         string test;
@@ -119,24 +118,14 @@ int main() {
 
 
     //Asking user if they want to translate again
-    cout << "\n\n\nDo you, " + username + ", want to translate another word? (y/n): ";
+    cout << "\n\n\nDo you want to translate another word? (y/n): ";
     getline(cin, userChoice2);
 
-    if (userChoice2 == "Y" || userChoice2 == "y") {
+    if (userChoice2 == "Y" || userChoice2 == "y" || userChoice2 == "Yes" || userChoice2 == "yes") {
       runAgain = true;
     }
-    else if (userChoice2 == "N" || userChoice2 == "n") {
-      cout << "Are you absolutely sure? (y/n): ";
-      getline(cin, userChoice2);
-      if (userChoice2 == "Y" || userChoice2 == "y") {
-        cout << "\nThanks for running!";
-        myfile.close();
-        myfile2.close();
-        runAgain = false;
-      }
-      else if (userChoice2 == "N" || userChoice2 == "n") {
-        runAgain = true;
-      }
+    else if (userChoice2 == "N" || userChoice2 == "n" || userChoice2 == "No" || userChoice2 == "no") {
+      runAgain = false;
     }
     
   } while (runAgain == true);
