@@ -82994,7 +82994,7 @@ ventanas
 sin ventanas
 cristal de la ventana
 ventanas
-Windows
+ventanas
 alféizar de la ventana
 tráquea
 tráqueas
